@@ -18,9 +18,7 @@ class TicTacToeGame : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Surface {
-                HomeScreen {
-
-                }
+                NavigationOfTicTacToeGame(this)
             }
         }
 

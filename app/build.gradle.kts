@@ -20,6 +20,8 @@ android {
         }
     }
 
+
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -38,6 +40,8 @@ android {
     }
     buildFeatures {
         compose = true
+        dataBinding=true
+        viewBinding=true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -61,7 +65,7 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
 
     //Splash Screen
-    implementation(libs.androidx.core.splashscreen)
+//    implementation(libs.androidx.core.splashscreen)
     
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AppSplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/green</item>
-        <item name="windowSplashScreenAnimationDuration">1000</item>
-        <item name="postSplashScreenTheme">@style/Theme.GameStack</item>
-    </style>
+<!--    <style name="Theme.AppSplashScreen" parent="Theme.SplashScreen">-->
+<!--        <item name="windowSplashScreenBackground">@color/green</item>-->
+<!--        <item name="windowSplashScreenAnimationDuration">2500</item>-->
+<!--        <item name="postSplashScreenTheme">@style/Theme.GameStack</item>-->
+<!--    </style>-->
 
-    <style name="Theme.GameStack" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.GameStack"
+        parent="android:Theme.Material.Light.NoActionBar" />
 
 </resources>

@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -43,7 +44,7 @@ fun DashboardUI(
     val listOfGames = mutableListOf<Game>().apply {
         add(Game(0L,"TIC TAC TOE"))
         add(Game(1L,"SUDOKU"))
-        //add(Game(2L,"CHESS GAME"))
+        add(Game(2L,"CHESS GAME"))
     }
 
     Scaffold (
@@ -63,9 +64,9 @@ fun DashboardUI(
                 Color(0xFF1976D2)
             )
             Text(
-                "SELECT GAME",
+                "WELCOME TO GAMES STACK!",
                 style = TextStyle(
-                    fontSize = 35.sp,
+                    fontSize = 20.sp,
                    // shadow = Shadow(color= Color.DarkGray, offset = Offset(5f,8.0f), blurRadius = 1f),
                     brush = Brush.linearGradient(
                         colors = gradientColors
@@ -85,9 +86,8 @@ fun DashboardUI(
                 Column (
                     Modifier
                         .fillMaxWidth()
-                        .fillMaxHeight()
-                        .background(Color(0xFF303030)),// slightly lighter bg
-                    verticalArrangement = Arrangement.Center,
+                        .fillMaxHeight(),
+                        verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ){
                     listOfGames.forEach { game->
@@ -122,7 +122,7 @@ fun EachGame(game: Game, onClickGame:(game:Game)->Unit) {
                 .padding(5.dp)
 
         ) {
-            Button(
+            OutlinedButton(
                 onClick = {
                 onClickGame(game)
             }) {

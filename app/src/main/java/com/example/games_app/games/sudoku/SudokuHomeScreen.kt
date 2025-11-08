@@ -56,7 +56,8 @@ fun SudokuGame(context: Context) {
 
     var selectedCell by remember { mutableStateOf<Pair<Int, Int>?>(null) }
 
-    var userRequiredNumbers by remember{
+
+    var userRequiredNumbers by remember {
         mutableStateOf((1..9).toMutableList())
     }
 
@@ -95,7 +96,7 @@ fun SudokuGame(context: Context) {
 
                         Row {
                             Cell(number = number, isSelected = selectedCell == Pair(i, j)) {
-                                selectedCell = Pair(i, j) // Set selected cell
+                                selectedCell = Pair(i, j) // Setting selected cell
                                 userRequiredNumbers = (1..9).toMutableList()
 
                                 userRequiredNumbers= getValidNumbersForCell(userRequiredNumbers,gameData,i,j)
@@ -108,9 +109,6 @@ fun SudokuGame(context: Context) {
                                        Toast.makeText(context," Retry Game", Toast.LENGTH_LONG).show()
                                    }
                                 }
-
-
-
                                 isRequiredNumbersVisible = true // Show number selection
                             }
                             if((j+1)%3==0) {

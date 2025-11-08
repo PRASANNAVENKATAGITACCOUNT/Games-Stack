@@ -20,7 +20,7 @@ fun getValidNumbersForCell(userRequiredNumbers : MutableList<Int>,  gameData: Li
     return userRequiredNumbers.filter { isValidInput(gameData, row, col, it) }.toMutableList()
 }
 
-//AI generated
+
 fun isValidInput(board: List<List<Int>>, row: Int, col: Int, value: Int): Boolean {
     // Check row
     if (board[row].contains(value)) return false
